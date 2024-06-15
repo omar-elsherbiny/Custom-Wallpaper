@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    overflow:  hidden;
+}
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to top right, hsla(36, 83%, 65%, 0.3), hsla(29, 83%, 51%, 0.8));
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+}
+
+.circle {
+    position: absolute;
+    width: 30%;
+    aspect-ratio: 1;
+    border-radius: 30%;
+    border: 10pt solid #ebba40;
+    box-shadow: 0 0 5rem #ebdd40;
+    transition: top 10s linear, left 10s linear;
+}
+
+@keyframes hcirc-anim {
+
+    0%,
+    100% {
+        aspect-ratio: 1.5;
+    }
+
+    50% {
+        aspect-ratio: 0.5;
+    }
+}
+
+@keyframes wcirc-anim {
+
+    0%,
+    100% {
+        width: 15%;
+    }
+
+    50% {
+        width: 25%;
+    }
+}
+
+@keyframes rcirc-anim {
+
+    0%,
+    100% {
+        border-radius: 30%;
+    }
+
+    50% {
+        border-radius: 50%;
+    }
+}
+
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
